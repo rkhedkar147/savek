@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Good Vibes Clinic v1.4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="login-screen" class="container">
+        <div class="terminal">
+            <h2>🩺 WELCOME TO THE GOOD VIBES CLINIC</h2>
+            <p>Quick check-in — nothing scary, promise</p>
+            <div class="input-group">
+                <label>What was the name of your first crush?</label>
+                <input type="text" id="name-input" placeholder="100% judgment-free zone">
+                <button onclick="verifyUser()">CHECK IN</button>
+            </div>
+            <p id="error-msg" class="witty-error"></p>
+        </div>
+    </div>
+
+    <div id="main-app" class="container" style="display:none;">
+        <div class="card">
+            <h1 id="greeting">Hi there 👋</h1>
+            <hr>
+
+            <div class="game-section">
+                <h3>Quick mood check</h3>
+                <button onclick="checkMood()">Check Status</button>
+                <p id="mood-label">Everything looks good 😊</p>
+            </div>
+            <hr>
+            <div class="game-section" id="trap-section">
+                <h3>Final question: was our time a good chapter?</h3>
+                <div class="btn-container">
+                    <button class="yes-btn" onclick="celebrate()">Definitely 💙</button>
+                    <button id="no-btn">Maybe ✨</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="celebration" class="overlay" style="display:none;">
+        <h1>ALL CLEAR 🎉</h1>
+        <p>Good memories confirmed. Wishing you nothing but the best.</p>
+        <button onclick="closeOverlay()">Done</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

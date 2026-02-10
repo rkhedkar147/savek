@@ -1,0 +1,143 @@
+:root {
+    --primary-pink: #ff4d6d;
+    --soft-pink: #fff0f3;
+    --glass-bg: rgba(255, 255, 255, 0.85);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: radial-gradient(circle, #ffe5ec 0%, #ffc2d1 100%);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+/* Glassmorphism Container */
+.container, .card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 40px 20px;
+    width: 100%;
+    max-width: 450px; /* Perfect for iPhone/iPad */
+    box-shadow: 0 15px 35px rgba(255, 77, 109, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+/* Terminal Look for Login */
+.terminal {
+    background: #2d0a10;
+    color: #ffb3c1;
+    padding: 30px 20px;
+    border-radius: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 15px;
+    border: 2px solid #ffccd5;
+    outline: none;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: var(--primary-pink);
+    box-shadow: 0 0 10px rgba(255, 77, 109, 0.2);
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: var(--primary-pink);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Game Elements */
+.game-section {
+    margin: 30px 0;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    background: #ffccd5;
+    border-radius: 5px;
+    outline: none;
+    margin: 20px 0;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    background: var(--primary-pink);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Responsive No-Button Container */
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    position: relative;
+    min-height: 120px;
+}
+
+#no-btn {
+    background: #a9a9a9;
+    width: auto;
+    padding: 10px 20px;
+}
+
+/* Celebration Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-pink);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+/* Media Query for iPad */
+@media (min-width: 768px) {
+    .card {
+        max-width: 600px;
+        padding: 50px;
+    }
+}

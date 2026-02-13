@@ -18,11 +18,11 @@ function verifyUser() {
 
 // 2. MOOD CHECK LOGIC (replaces slider entirely)
 const moods = [
-    "All good 😊",
-    "Fond memories detected 🌱",
-    "Smiles confirmed ✨",
-    "Emotional vitals: stable 🩺",
-    "Good vibes only 💙"
+    "Radiance that lights up the room ✨",
+    "Eyes that hold a thousand stories 🌟",
+    "A smile more beautiful than sunrise 🌅",
+    "Grace in every gesture 💃",
+    "Beauty that inspires poetry 📝"
 ];
 
 let moodIndex = 0;
@@ -33,8 +33,6 @@ function checkMood() {
     moodIndex = (moodIndex + 1) % moods.length;
 }
 
-
-// 3. FRIENDLY BUTTON LOGIC
 const noBtn = document.getElementById('no-btn');
 
 function moveButton() {
